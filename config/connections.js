@@ -3,11 +3,11 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  port: 3000,
+  port: 8080,
   user: 'root',
   // NOTE: Be sure to add your MySQL password here!
-  password: '',
-  database: 'burger_db',
+  password: 'Nightfloat77$',
+  database: 'burgers_db',
 });
 
 // Make connection.
