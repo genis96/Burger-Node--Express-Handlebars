@@ -1,17 +1,31 @@
+
+
+.jumbotron {
+    background-color: cadetblue;
+}
+
 h1 {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+}
+
 li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
+    padding: 25px;
+    margin: 10px;
+    background: #ece1d2;
     color: black;
   }
   
   .label {
     font-weight: bold;
     color: black;
+  }
+
+  #create-form {
+      margin-bottom: 10px;
   }
   
   .create-update-form {
