@@ -11,15 +11,23 @@ li {
   
   .label {
     font-weight: bold;
+    color: black;
   }
   
   .create-update-form {
     padding: 5px;
     margin: 5px;
     background: aqua;
+    color: black;
   }
   
   .form-group {
     margin-bottom: 5px;
+    color: black;
+  }
+
+  .img {
+      align-items: center;
+    width: 100%;
   }
   
