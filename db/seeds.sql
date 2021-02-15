@@ -1,4 +1,10 @@
-INSERT INTO burgers (name) VALUES ('');
-INSERT INTO burgers (name) VALUES ('');
-INSERT INTO burgers (name, sleepy) VALUES ('', true);
+INSERT INTO burgers (burger_name, devoured) 
+VALUES ('Spicy Chicken Burger', FALSE);
+
+INSERT INTO burgers (burger_name, devoured) 
+VALUES ('Cheese Burger', FALSE);
+
+INSERT INTO burgers (burger_name, devoured) 
+VALUES ('Double Cheese Burger', TRUE);
+
 
