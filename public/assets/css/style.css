@@ -1,4 +1,10 @@
-
+body {
+    background-color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    line-height: 4px;
+    color: black;
+}
 
 .jumbotron {
     background-color: cadetblue;
