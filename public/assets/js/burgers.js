@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // updating buttons, linked to the burger-blocl.handlebars
 const changeDevouredBtns = document.querySelectorAll('.change-devoured');
 
-// set event listeners for the create button - CHANGE, CREATE, POST, DELETE
+// set event listeners for the create button - UPDATE/CHANGE, CREATE, POST, DELETE
 if(changeDevouredBtns) {
     changeDevouredBtns.forEach((button) => {
         button.addEventListener('click', (e) => {
