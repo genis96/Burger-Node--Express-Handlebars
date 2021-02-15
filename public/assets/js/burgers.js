@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 document.addEventListener('DOMContentLoaded', (event) => {
     if(event) {
         console.info('DOM LOADED');
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // updating buttons, linked to the burger-blocl.handlebars
 const changeDevouredBtns = document.querySelectorAll('.change-devoured');
 
-// set event listeners for the create button - CREATE, POST, DELETE
+// set event listeners for the create button - CHANGE, CREATE, POST, DELETE
 if(changeDevouredBtns) {
     changeDevouredBtns.forEach((button) => {
         button.addEventListener('click', (e) => {
@@ -27,9 +29,16 @@ if(changeDevouredBtns) {
                 },
                 // stringift JSON
                 body: JSON.stringify(newDevouredState),
-            })
-        })
-    })
+            }).then((response) => {
+                if(response.ok) {
+                    console.log(`changed devoured to: ${newDevoured}`);
+                    location.reload('/');
+                } else {
+                    alert('something went wrong!');
+                }
+            });
+        });
+    });
 }
 
 
