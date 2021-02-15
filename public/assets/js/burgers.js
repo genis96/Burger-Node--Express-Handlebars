@@ -14,9 +14,20 @@ if(changeDevouredBtns) {
             // grab id elem (e) - "id"
             const id = e.target.getAttribute('data-id');
             const newDevoured = e.target.getAttribute('data-newDevoured');
+            
             const newDevouredState = {
                 devoured: newDevoured,
             };
+
+            fetch(`/api/burgers/${id}`, {
+                method: 'PUT',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                // stringift JSON
+                body: JSON.stringify(newDevouredState),
+            })
         })
     })
 }
