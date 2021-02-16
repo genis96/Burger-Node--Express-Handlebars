@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 })
 
-// updating buttons, linked to the burger-blocl.handlebars
+// UPDATE/CHANGE button, linked to the burger-blocl.handlebars
 const changeDevouredBtns = document.querySelectorAll('.change-devoured');
 
 // set event listeners for the create button - UPDATE/CHANGE, CREATE, POST, DELETE
@@ -41,5 +41,19 @@ if(changeDevouredBtns) {
     });
 }
 
+// CREATE
+const createBurgerBtn = document.getElementById('create-form');
+
+if(createBurgerBtn) {
+    createBurgerBtn.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // grab textarea value
+        const newBurger = {
+            burger_name: document.getElementById('ca').value.trim(),
+            devoured: document.getElementById('devoured').checked,
+        };
+    })
+}
 
 
