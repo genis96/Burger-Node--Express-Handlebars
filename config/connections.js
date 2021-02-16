@@ -2,6 +2,8 @@
 const mysql = require('mysql');
 let connection;
 
+// working on heroku
+
 if(process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
