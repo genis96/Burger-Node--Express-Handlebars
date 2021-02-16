@@ -73,5 +73,18 @@ if(createBurgerBtn) {
 }
 
 // DELETE
+const deleteBurgerBtns = document.querySelectorAll('.delete-burger');
 
+deleteBurgerBtns.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const id = e.target.getAttribute('data-id');
+
+        // send request
+        fetch(`api/burgers/${id}`, {
+            method: 'DELETE',
+        }).then((res) => {
+            
+        })
+    })
+})
 
