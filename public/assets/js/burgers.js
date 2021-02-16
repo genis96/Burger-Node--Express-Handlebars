@@ -53,7 +53,23 @@ if(createBurgerBtn) {
             burger_name: document.getElementById('ca').value.trim(),
             devoured: document.getElementById('devoured').checked,
         };
-    })
+        //send POST request for new quote
+        fetch('api/burgers', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            //json stringify 
+            body: JSON.stringify(newBurger),
+        }).then(() => {
+            // empty form
+            document.getElementById('ca').value = '';
+            // reload
+            console.log('Created new burger!');
+            location.reload();
+        });
+    });
 }
 
 
