@@ -1,7 +1,9 @@
 <div class="container">
-    <div class="jumbotron">
-        <img class="img" src="/public/assets/images/burger.png" alt="">
-        <h1>Eat The Burger</h1>
+    <div class="row">
+    <div class="col" align="center">
+        <img class="img" src="/public/assets/images/burger.png" alt="burger logo">
+        <h1 class="justify-center-content">Eat The Burger</h1>
+    </div>
     </div>
 
     <div class="row">
@@ -25,9 +27,9 @@
             <div class="panel-panel default">
                 <ul>
                     {{#each burgers}}
-                    {{#unless devoured}}
+                    {{#if devoured}}
                     {{> burgers/burger-block devoured=false}}
-                    {{/unless}}
+                    {{/if}}
                     {{/each}}
                 </ul>
             </div>
@@ -44,7 +46,7 @@
             <input type="hidden" name="devoured" id="devoured" value="0" checked>
         </div>
 
-        <button class="btn btn-warning btn-lg" type="submit">Add Burger</button>
+        <button class="btn btn-warning btn-lg" type="submit">Submit</button>
         </form>
     </div>
 
