@@ -1,5 +1,5 @@
 // Import MySQL connection.
-const connection = require('./connections.js');
+const connection = require('./connections.js').default;
 
 // Helper function for SQL syntax to add question marks (?, ?, ?) in query
 const printQuestionMarks = (num) => {

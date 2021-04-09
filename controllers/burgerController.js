@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
 //INSIDE MODELS FOLDER. - Import the model (burger.js) to use its database functions.
