@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 //INSIDE MODELS FOLDER. - Import the model (burger.js) to use its database functions.
-const cat = require('../models/burger.js');
+const burger = require('../models/burger.js');
 
 // Create all our routes and set up logic within those routes where required.
 router.get('/', (req, res) => {
-  cat.all((data) => {
+  burger.all((data) => {
     const hbsObject = {
     // burgers from inside the public js
     burgers: data,
@@ -16,19 +16,21 @@ router.get('/', (req, res) => {
   });
 });
 
+// creates new burger
 router.post('/api/burgers', (req, res) => {
-  cat.create(['name', 'devoured'], [req.body.name, req.body.devoured], (result) => {
+  burger.create(['name', 'devoured'], [req.body.name, req.body.devoured], (result) => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
+// updates
 router.put('/api/burgers/:id', (req, res) => {
   const condition = `id = ${req.params.id}`;
 
   console.log('condition', condition);
 
-  cat.update(
+  burger.update(
     {
         devoured: req.body.devoured,
     },
@@ -46,7 +48,7 @@ router.put('/api/burgers/:id', (req, res) => {
 router.delete('/api/burgers/:id', (req, res) => {
   const condition = `id = ${req.params.id}`;
 
-  cat.delete(condition, (result) => {
+  burger.delete(condition, (result) => {
     if (result.affectedRows === 0) {
       return res.status(404).end();
     }
